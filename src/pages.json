@@ -1,0 +1,110 @@
+{
+  "pages": [
+    {
+      "path": "pages/shop/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/knowledge/index",
+      "style": {
+        "navigationBarTitleText": "百科"
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "商城",
+        "enablePullDownRefresh": true,
+        "mp-weixin": {
+          "homeButton": true
+        },
+        "app-plus": {
+          "titleNView": {
+            "searchInput": {
+              "placeholder": "请输入订单关键字",
+              "borderRadius": "50rpx",
+              "backgroundColor": "#f1f1f1",
+              "align": "left",
+              "autoFocus": true
+            },
+            "buttons": [
+              //原生标题栏按钮配置,
+              {
+                "text": "搜索", //原生标题栏增加分享按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+                "fontSize": "30rpx"
+              },
+              {
+                "float": "left",
+                "type": "back"
+              }
+            ],
+            "autoBackButton": true,
+            "backButton": {
+              "type": "back"
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "pages/me/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "usingComponents": {
+      "van-tabs": "/wxcomponents/vant/tabs/index",
+      "van-tab": "/wxcomponents/vant/tab/index",
+      "van-button": "/wxcomponents/vant/button/index",
+      "van-popup": "/wxcomponents/vant/popup/index",
+      "van-divider": "/wxcomponents/vant/divider/index"
+    }
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/home1.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/knowledge/index",
+        "iconPath": "static/images/knowledge.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "百科"
+      },
+      {
+        "pagePath": "pages/shop/index",
+        "iconPath": "static/images/shop.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "static/images/me.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
